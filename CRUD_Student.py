@@ -3,14 +3,19 @@ students = []
 
 # Add a student to the list
 def Add_sinhvien(student_id, student_name, student_age, major):
-    students .append({'id':student_id, 'name':student_name, 'age':student_age, 'major':major})
+    students .append({'id': student_id, 'name': student_name, 'age': student_age, 'major': major})
     print(student_name + " was added!")
 
 # Update a student's information
 def CapNhatSinhVien(student_id, new_name, new_age, new_major):
     for student in range(len(students)):
-            if students[student]['id'] == student_id: students[student]['name'] = new_name; students[student]['age'] = new_age; students[student]['major'] = new_major; print("Updated " + new_name); break
-            else: print("Not found student with ID: " + str(id))
+        if students[student]['id'] == student_id: 
+            students[student]['name'] = new_name
+            students[student]['age'] = new_age
+            students[student]['major'] = new_major
+            print("Updated " + new_name)
+            break
+    else: print("Not found student with ID: " + str(student_id))
 
 # Increase a student's age by 1
 def tang_tuoi(student_id):
@@ -23,7 +28,7 @@ def tang_tuoi(student_id):
 # Show list Students on Display
 def Display(): 
     print("Student List");   
-    for student in students:print("id:"+str(student['id'])+" name:"+student['name']+" age:"+str(student['age'])+" major:"+student['major'])
+    for student in students:print("id: " + str(student['id']) + " name: " + student['name'] + " age: " + str(student['age']) + " major: " + student['major'])
 
 # Add student to list
 Add_sinhvien(1,'Nguyen Van A',20,'Cong nghe thong tin')
