@@ -16,7 +16,7 @@ def CapNhatSinhVien(student_id, new_name, new_age, new_major):
 def tang_tuoi(student_id):
     for student in students:
         if student['id'] == student_id:
-            student['age']+=1
+            student['age'] += 1
             print(student['name'] + " is now older, current age is " + str(student['age']))
             break
 
