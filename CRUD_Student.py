@@ -1,29 +1,29 @@
 # Initialize the list of students
-s = []
+students = []
 
 # Add a student to the list
-def Add_sinhvien(idSV, tenSV, tuoiSV, nganhhoc):
-    s.append({'iD':idSV, 'Name':tenSV, 'Tuoi':tuoiSV, 'Major':nganhhoc})
-    print(tenSV + " was added!")
+def Add_sinhvien(student_id, student_name, student_age, major):
+    students .append({'id':student_id, 'name':student_name, 'age':student_age, 'major':major})
+    print(student_name + " was added!")
 
 # Update a student's information
-def CapNhatSinhVien(ID, newTenSV, newTuoi, newNganhHoc):
-    for X in range(len(s)):
-            if s[X]['iD'] == ID: s[X]['Name'] = newTenSV; s[X]['Tuoi'] = newTuoi; s[X]['Major'] = newNganhHoc; print("Updated " + newTenSV); break
-            else: print("Not found student with ID: " + str(ID))
+def CapNhatSinhVien(student_id, new_name, new_age, new_major):
+    for student in range(len(students)):
+            if students[student]['id'] == student_id: students[student]['name'] = new_name; students[student]['age'] = new_age; students[student]['major'] = new_major; print("Updated " + new_name); break
+            else: print("Not found student with ID: " + str(id))
 
 # Increase a student's age by 1
-def tang_tuoi(svID):
-    for i in s:
-        if i['iD'] == svID:
-            i['Tuoi']+=1
-            print(i['Name'] + " is now older, current age is " + str(i['Tuoi']))
+def tang_tuoi(student_id):
+    for student in students:
+        if student['id'] == student_id:
+            student['age']+=1
+            print(student['name'] + " is now older, current age is " + str(student['age']))
             break
 
 # Show list Students on Display
 def Display(): 
     print("Student List");   
-    for i in s:print("id:"+str(i['iD'])+" name:"+i['Name']+" age:"+str(i['Tuoi'])+" major:"+i['Major'])
+    for student in students:print("id:"+str(student['id'])+" name:"+student['name']+" age:"+str(student['age'])+" major:"+student['major'])
 
 # Add student to list
 Add_sinhvien(1,'Nguyen Van A',20,'Cong nghe thong tin')
