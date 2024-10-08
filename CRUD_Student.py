@@ -15,7 +15,8 @@ def CapNhatSinhVien(student_id, new_name, new_age, new_major):
             students[student]['major'] = new_major
             print("Updated " + new_name)
             break
-    else: print("Not found student with ID: " + str(student_id))
+    else: 
+        print("Not found student with ID: " + str(student_id))
 
 # Increase a student's age by 1
 def tang_tuoi(student_id):
@@ -27,8 +28,9 @@ def tang_tuoi(student_id):
 
 # Show list Students on Display
 def Display(): 
-    print("Student List")
-    for student in students:print("id: " + str(student['id']) + " name: " + student['name'] + " age: " + str(student['age']) + " major: " + student['major'])
+    print("Student list")
+    for student in students:
+        print("id: " + str(student['id']) + " name: " + student['name'] + " age: " + str(student['age']) + " major: " + student['major'])
 
 # Add student to list
 Add_sinhvien(1,'Nguyen Van A',20,'Cong nghe thong tin')
