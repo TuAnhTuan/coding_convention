@@ -27,7 +27,7 @@ def tang_tuoi(student_id):
 
 # Show list Students on Display
 def Display(): 
-    print("Student List");   
+    print("Student List")
     for student in students:print("id: " + str(student['id']) + " name: " + student['name'] + " age: " + str(student['age']) + " major: " + student['major'])
 
 # Add student to list
